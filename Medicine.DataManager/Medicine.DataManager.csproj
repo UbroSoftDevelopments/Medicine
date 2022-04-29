@@ -42,18 +42,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cart.cs" />
+    <Compile Include="CartController.cs" />
+    <Compile Include="CartItem.cs" />
+    <Compile Include="CompanyUtilities.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DateUtilities.cs" />
+    <Compile Include="DiscountUtilities.cs" />
     <Compile Include="LoginManager.cs" />
+    <Compile Include="MedicalStoresData.cs" />
+    <Compile Include="MedicineDetails.cs" />
+    <Compile Include="MedicineEntryInStockcs.cs" />
+    <Compile Include="MedicineStockData.cs" />
+    <Compile Include="MedicineTypeUtilities.cs" />
+    <Compile Include="MrpUtilities.cs" />
+    <Compile Include="ProductUtilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="PurchaseCart.cs" />
+    <Compile Include="PurchaseCartController.cs" />
+    <Compile Include="PurchaseItemDetails.cs" />
+    <Compile Include="SearchingUtilities.cs" />
+    <Compile Include="StockUtilities.cs" />
+    <Compile Include="UnitUtilities.cs" />
+    <Compile Include="userUtils.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="Validation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
