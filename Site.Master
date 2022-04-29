@@ -1,0 +1,207 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Medicine.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="Stylesheet" href="CSS/StyleSheet.css" />
+<link rel="Stylesheet" href="CSS/our.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="Stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="w3-light-grey">
+<div class="w3-top w3-mobile">
+
+
+
+
+
+
+    <div class="w3-container w3-text-red w3-mobile w3-row" style="background: linear-gradient(to bottom, #0099ff 0%, #ccffff 100%)">
+        <div class="w3-col s2 w3-margin-bottom w3-margin-top w3-center">
+        
+        <img src="Resources/geetanjaliLogo.png" alt="Logo" height="125" width="125"/>
+        </div>
+
+        <div class="w3-col s10">
+        <label class="w3-left">AN ISO : 9001:2015 CERTIFIED HOSPITAL</label>
+        <label class="w3-right">Reged No. : CMO/HOP/21/MZP</label><br/>
+        <label class="w3-xxlarge w3-text-red w3-center">लाइफ केयर हॉस्पिटल एंड सर्जिकल सेंटर
+ट्रामा क्रिटिकल केयर</label>
+        <br />
+        <label class="w3-xlarge w3-text-red w3-center">Mirzapur - Varanasi Road, Milkipur Uttar Pradesh 231305</label>
+        
+        
+        </div>
+    </div>
+
+
+
+<div class="w3-bar w3-teal glossButton w3-row" id="adminMenu" runat="server">
+<div class="w3-col s2 w3-center"><br /></div>
+<div class="w3-col s10">
+  <a href="storename.aspx" class="w3-bar-item w3-button w3-hide-small glossButton">
+  <img src="Resources/medicalstore.png" alt="StoreLogo" height="17" /> Medical Agency </a>
+   <a href="unitentry.aspx" class="w3-bar-item w3-button w3-hide-small glossButton">
+  <img src="Resources/medicinetype1.png" alt="typeLogo" height="17" /> Product Type </a>
+  <a href="productname.aspx" class="w3-bar-item w3-button w3-hide-small glossButton"><img src="Resources/productentry.png" alt="productLogo" height="17" /> Add Medicine</a>
+  
+   <a href="debitpayment.aspx" class="w3-bar-item w3-button glossButton"><img src="Resources/debitpayment.png" alt="PaymentLogo" height="17" /> Debit Payment</a>
+      <a href="payments.aspx" class="w3-bar-item w3-button glossButton"><img src="Resources/creditpayment.png" alt="CreaditLogo" height="17" /> Credit Payment</a>
+      <a href="ledgeramount.aspx" class="w3-bar-item w3-button glossButton"><img src="Resources/ledger.png" alt="LedgerLogo" height="17" /> Ledger Amount</a>
+
+    <div class="w3-dropdown-hover w3-hide-small">
+   <button class="w3-button glossButton">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-left" style="right:0">
+        <a href="selectreceipt.aspx" class="w3-bar-item w3-button">
+      <img src="Resources/bill.png" alt="selectreceipt" height="17" /> Print Receipt</a>
+      <a href="mycollection.aspx" class="w3-bar-item w3-button">
+      <img src="Resources/collection.png" alt="selectreceipt" height="17" /> View Collections</a>
+    <a href="createUser.aspx" class="w3-bar-item w3-button"><img src="Resources/adduser.png" alt="departLogo" height="17" /> Add User</a>  
+    <a href="ratelist.aspx" class="w3-bar-item w3-button"><img src="Resources/ratelist.jpg" alt="rateLogo" height="17" /> Margins</a>
+    <a href="changePassword.aspx" class="w3-bar-item w3-button">
+      <img src="Resources/changepassword.png" alt="changeLogo" height="17" /> Change Password</a>
+      <a href="#profile.aspx" class="w3-bar-item w3-button">
+      <img src="Resources/profile.png" alt="profile" height="17" /> Profile</a>
+      <a href="logout.aspx" class="w3-bar-item w3-button">
+      <img src="Resources/logout.png" alt="logoutLogo" height="17" /> Log Out</a>
+    <a href="help.aspx" class="w3-bar-item w3-button"><img src="Resources/helpandsupport.png" alt="HelpLogo" height="17" /> Help</a>
+    </div>
+    </div>
+      
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+</div>
+</div>
+
+
+<div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium" runat="server">
+  <a href="countersale.aspx" class="w3-bar-item w3-button"><img src="Resources/countersale.png" alt="saleLogo" height="17" /> Counter Sale</a>
+  <a href="purchasedetails.aspx" class="w3-bar-item w3-button"><img src="Resources/purchaselogo.png" alt="purchaseLogo" height="17" /> Purchase</a>
+  <a href="searchmedicine.aspx" class="w3-bar-item w3-button"><img src="Resources/search.png" alt="searchLogo" height="17" /> Search Medicine</a>
+  
+</div>
+
+  <div class="w3-bar w3-teal glossButton w3-row" id="userMenu" runat="server">
+  <div class="w3-col s4 w3-center">
+  
+   <button class="w3-bar-item w3-button w3-hide-small glossButton">
+   <asp:Label ID="Label1" Text="Logged In User Name:-" runat="server"></asp:Label>
+   <asp:Label ID="ckUser" Text="Hi Guest" runat="server"></asp:Label>
+   </button>
+    
+  </div>
+   <div class="w3-col s6 w3-center">&nbsp;</div>
+  <div class="w3-col s2 w3-right-align w3-center">
+  <a href="mycollection.aspx"><button class="w3-button glossButton">My Collection</button></a>
+  <a href="logout.aspx"><button class="w3-button glossButton w3-right">Logout</button></a>
+  </div>
+
+
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myUserFunction()">&#9776;</a>
+  </div>
+
+<div id="demoUser" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium" runat="server">
+  <a href="countersale.aspx" class="w3-bar-item w3-button"><img src="Resources/countersale.png" alt="saleLogo" height="17" /> Counter Sale</a>
+  <a href="purchasedetails.aspx" class="w3-bar-item w3-button"><img src="Resources/purchaselogo.png" alt="purchaseLogo" height="17" /> Purchase</a>
+  <a href="searchmedicine.aspx" class="w3-bar-item w3-button"><img src="Resources/search.png" alt="searchLogo" height="17" /> Search Medicine</a>
+ 
+</div>
+
+<div class="w3-bar w3-teal glossButton" id="index" runat="server">
+  <a href="login.aspx" class="w3-bar-item w3-button glossButton w3-right">
+  <img src="Resources/login.png" alt="loginLogo" height="17" /> Login</a>
+  </div>
+  <div class="w3-row w3-mobile">
+  <div class="w3-col w3-hide-small s2 w3-border w3-mobile w3-center">
+  <div id="option" runat="server">
+  <div class="w3-row w3-mobile">
+    <a href="home.aspx">
+    <div style="width:100%" class="glossButton w3-aqua">
+    <img src="Resources/home1.png" alt="homeLogo" width="30%" /><br /> Home</div></a>
+  </div>
+    <div class="w3-row w3-mobile">
+    <a href="medicinecompany.aspx">
+    <div style="width:100%" class="glossButton w3-aqua">
+    <img src="Resources/medicinecompany1.png" alt="medicinecompanyLogo" width="40%" /> <br />Medicine Company</div></a>
+  </div>
+   <div class="w3-row w3-mobile">
+    <a href="countersale.aspx">
+    <div style="width:100%" class="glossButton w3-aqua">
+    <img src="Resources/countersale.png" alt="opdLogo" width="35%" /> <br />Counter Sale</div></a>
+  </div>
+    <div class="w3-row w3-mobile">
+    <a href="purchasedetails.aspx">
+    <div style="width:100%" class="glossButton w3-aqua">
+    <img src="Resources/purchaselogo.png" alt="PurchaseLogo" width="35%" /><br /> Purchase</div></a>
+  </div>
+   <div class="w3-row w3-mobile">
+    <a href="searchmedicine.aspx">
+    <div style="width:100%" class="glossButton w3-aqua">
+    <img src="Resources/search.png" alt="SearchingLogo" width="30%" /><br /> Search</div></a>
+  </div>
+  </div>
+  <div class="" id="welcome" runat="server">
+  <div class="w3-row w3-aqua glossButton w3-text-white">
+  <br /><br />
+  <img src="Resources/welcome.png" alt="welcome" width="60%" />
+  <center><h2><b>Welcome To Geetanjali Hospital<br />
+  Medicine Management</b>
+  </h2></center><br /><br /><br />
+  </div>
+  </div>
+  </div>
+  <div class="w3-col s10 w3-mobile w3-padding w3-pale-green" style=" overflow:scroll; height:80vh;border-width:medium;border-style:double;border-color:Black">
+  <br />
+   <form id="form1" runat="server">
+   <div class="w3-container">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">       
+        </asp:ContentPlaceHolder>
+        <br /><br /><br />
+         <div class="w3-bottombar w3-gray w3-large w3-mobile w3-center w3-opacity">Copyright &copy; Geetanjali Life Care</div>
+        <br /><br /><br />
+       
+    </div>
+    </form>
+    </div>
+
+
+  </div>
+
+
+
+
+  
+    <script type="text/javascript">
+        function myFunction() {
+            var x = document.getElementById("demo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        function myUserFunction() {
+            var x = document.getElementById("demoUser");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+    </script>
+</div>
+</html>
