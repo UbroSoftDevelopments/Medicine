@@ -7,11 +7,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="Stylesheet" href="CSS/StyleSheet.css" />
-<link rel="Stylesheet" href="CSS/our.css" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="Stylesheet" />
+    <link rel="Stylesheet" href="CSS/StyleSheet.css" />
+    <link rel="Stylesheet" href="CSS/our.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
@@ -175,7 +172,6 @@
     </div>
     </form>
     </div>
-
 
   </div>
 

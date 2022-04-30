@@ -8,7 +8,7 @@ using System.Web.SessionState;
 
 namespace Medicine.DataManager
 {
-    class LoginManager
+    public class LoginManager
     {
         private static string loginpage = "login.aspx", homepage = "home.aspx", blankpage = "blank.aspx";
         public static void DoLogout(HttpSessionState session, HttpResponse response)

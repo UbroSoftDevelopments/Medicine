@@ -112,12 +112,14 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="countersale.aspx" />
     <Content Include="CSS\our.css" />
     <Content Include="CSS\StyleSheet.css" />
     <Content Include="Default.aspx" />
+    <Content Include="discount.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="firmselection.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -127,6 +129,15 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Global.asax" />
+    <Content Include="home.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="medicinecompany.aspx" />
+    <Content Include="medicinenearexpiry.aspx" />
+    <Content Include="printreceipt.aspx" />
+    <Content Include="purchasedetails.aspx" />
     <Content Include="Resources\adduser.png" />
     <Content Include="Resources\bill.png" />
     <Content Include="Resources\changepassword.png" />
@@ -190,8 +201,9 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="searchmedicine.aspx" />
     <Content Include="Site.Master" />
-    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="storename.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -213,6 +225,13 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="countersale.aspx.cs">
+      <DependentUpon>countersale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="countersale.aspx.designer.cs">
+      <DependentUpon>countersale.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -220,10 +239,87 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="discount.aspx.cs">
+      <DependentUpon>discount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="discount.aspx.designer.cs">
+      <DependentUpon>discount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="firmselection.aspx.cs">
+      <DependentUpon>firmselection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="firmselection.aspx.designer.cs">
+      <DependentUpon>firmselection.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicinecompany.aspx.cs">
+      <DependentUpon>medicinecompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicinecompany.aspx.designer.cs">
+      <DependentUpon>medicinecompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicinenearexpiry.aspx.cs">
+      <DependentUpon>medicinenearexpiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicinenearexpiry.aspx.designer.cs">
+      <DependentUpon>medicinenearexpiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="printreceipt.aspx.cs">
+      <DependentUpon>printreceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="printreceipt.aspx.designer.cs">
+      <DependentUpon>printreceipt.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="purchasedetails.aspx.cs">
+      <DependentUpon>purchasedetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchasedetails.aspx.designer.cs">
+      <DependentUpon>purchasedetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="searchmedicine.aspx.cs">
+      <DependentUpon>searchmedicine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="searchmedicine.aspx.designer.cs">
+      <DependentUpon>searchmedicine.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -238,12 +334,12 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="ViewSwitcher.ascx.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    <Compile Include="storename.aspx.cs">
+      <DependentUpon>storename.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewSwitcher.ascx.designer.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    <Compile Include="storename.aspx.designer.cs">
+      <DependentUpon>storename.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

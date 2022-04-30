@@ -33,5 +33,16 @@ namespace Medicine.DataManager.Properties {
                 return ((string)(this["medicineConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLlocalDB;Initial Catalog=IODatabase;Integrated Security" +
+            "=True")]
+        public string IODatabaseConnectionString {
+            get {
+                return ((string)(this["IODatabaseConnectionString"]));
+            }
+        }
     }
 }
