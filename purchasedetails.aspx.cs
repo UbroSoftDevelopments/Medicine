@@ -85,7 +85,7 @@ namespace Medicine
                 DataManager.DataSet1TableAdapters.purchasecartTableAdapter pda = new DataManager.DataSet1TableAdapters.purchasecartTableAdapter();
                 DataSet1.purchasecartDataTable pdt = pda.GetDataByProductNoAndBatchno(productno, batchno);
                 if (pdt.Rows.Count <= 0)
-                    pda.Insert(billno, productno, boxno, stripinsidebox, medicineinsidestrip, unit, batchno, txthsnno.Text, mrp, Convert.ToDateTime(txtmfgdate.Text), Convert.ToDateTime(txtexpiry.Text), rackno);
+                    pda.InsertQuery(billno, productno, boxno, stripinsidebox, medicineinsidestrip, unit, batchno, txthsnno.Text, mrp, Convert.ToDateTime(txtmfgdate.Text), Convert.ToDateTime(txtexpiry.Text), rackno);
                 else
                 {
 
@@ -136,7 +136,7 @@ namespace Medicine
                 int newbillno = -1;
                 {
                     DataManager.DataSet1TableAdapters.customerbilldetailsTableAdapter da = new DataManager.DataSet1TableAdapters.customerbilldetailsTableAdapter();
-                    da.Insert(txtname.Text, Convert.ToDateTime("" + txtdate.Text), txtaddress.Text, txtmobileno.Text, txtcustomerbillno.Text);
+                    da.InsertQuery(txtname.Text, Convert.ToDateTime(txtdate.Text), txtaddress.Text, txtmobileno.Text, txtcustomerbillno.Text);
 
                     newbillno = Convert.ToInt32(da.GetMaxSno());
                 }
@@ -153,7 +153,7 @@ namespace Medicine
                     DataSet1.medicinestockDataTable mdt = mda.GetDataByProductNoAndBatchNo(pdr.productno, pdr.batchno);
                     if (mdt.Rows.Count <= 0)
                     {
-                        mda.Insert(pdr.productno, pdr.batchno, pdr.mrp, pdr.mrp, pdr.mfgdate, pdr.expirydate, pdr.boxno, pdr.stripinsidebox, pdr.medicineinsidestrip, pdr.unit, pdr.hsnno, Convert.ToString(pdr.rackno), newbillno);
+                        mda.InsertQuery(pdr.productno, pdr.batchno, pdr.mrp, pdr.mrp, pdr.mfgdate, pdr.expirydate, pdr.boxno, pdr.stripinsidebox, pdr.medicineinsidestrip, pdr.unit, pdr.hsnno, Convert.ToString(pdr.rackno), newbillno);
 
                     }
                     else
@@ -192,7 +192,7 @@ namespace Medicine
                 btreset_Click(sender, e);
                 int firmno = Convert.ToInt32(Request.QueryString["sno"]);
                 DataManager.DataSet1TableAdapters.firmamountTableAdapter fda = new DataManager.DataSet1TableAdapters.firmamountTableAdapter();
-                fda.Insert(firmno, billno, totalfirmamount, System.DateTime.Now, "");
+                fda.InsertQuery(firmno, billno, totalfirmamount, System.DateTime.Now, "");
 
 
             }
@@ -269,11 +269,11 @@ namespace Medicine
                 DataSet1.productsDataTable dt = da.GetDataByProductName(name);
                 if (dt.Rows.Count <= 0)
                 {
-                    da.Insert(name, typeno, companyno, "");
+                    da.InsertQuery(name, typeno, companyno, "");
 
                     int productno = (int)da.GetMaxProductNo();
                     DataManager.DataSet1TableAdapters.productbatchTableAdapter pda = new DataManager.DataSet1TableAdapters.productbatchTableAdapter();
-                    pda.Insert(productno, batchno, purchaserate, rateforsale);
+                    pda.InsertQuery(productno, batchno, purchaserate, rateforsale);
                 }
                 else
                 {
@@ -283,7 +283,7 @@ namespace Medicine
                     DataSet1.productbatchDataTable pdt = pda.GetDataByBatchNoAndProductNo(batchno, productno);
                     if (pdt.Rows.Count > 0)
                         throw new Exception("Entry For This Batchno And Product Has Already Done!!");
-                    pda.Insert(productno, batchno, purchaserate, rateforsale);
+                    pda.InsertQuery(productno, batchno, purchaserate, rateforsale);
                 }
 
                 Response.Redirect("purchasedetails.aspx?sno=" + Convert.ToInt32(Request.QueryString["sno"]));
