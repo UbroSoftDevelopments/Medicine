@@ -26,22 +26,22 @@ namespace Medicine.DataManager.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=medicine;Integrated Security=T" +
-            "rue")]
-        public string medicineConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLlocalDB;Initial Catalog=IODatabase;Integrated Security" +
+            "=True")]
+        public string IODatabaseConnectionString {
             get {
-                return ((string)(this["medicineConnectionString"]));
+                return ((string)(this["IODatabaseConnectionString"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLlocalDB;Initial Catalog=IODatabase;Integrated Security" +
-            "=True")]
-        public string IODatabaseConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("server=sg2nlmysql53plsk.secureserver.net;user id=ubromed;password=ubro_medicine@0" +
+            "101;persistsecurityinfo=True;sslmode=None;database=medicine")]
+        public string medicineConnectionString {
             get {
-                return ((string)(this["IODatabaseConnectionString"]));
+                return ((string)(this["medicineConnectionString"]));
             }
         }
     }
