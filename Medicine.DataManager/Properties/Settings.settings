@@ -13,10 +13,18 @@
     <Setting Name="medicineConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;server=sg2nlmysql53plsk.secureserver.net;user id=ubromed;password=ubro_medicine@0101;persistsecurityinfo=True;sslmode=None;database=medicine&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;server=sg2nlmysql53plsk.secureserver.net;user id=ubromed;password=ubro_medicine@0101;database=medicine;persistsecurityinfo=True&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">server=sg2nlmysql53plsk.secureserver.net;user id=ubromed;password=ubro_medicine@0101;persistsecurityinfo=True;sslmode=None;database=medicine</Value>
+      <Value Profile="(Default)">server=sg2nlmysql53plsk.secureserver.net;user id=ubromed;password=ubro_medicine@0101;database=medicine;persistsecurityinfo=True</Value>
+    </Setting>
+    <Setting Name="medicineConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=sg2nlmysql53plsk.secureserver.net;user id=ubromed;persistsecurityinfo=True;sslmode=None;database=medicine&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=sg2nlmysql53plsk.secureserver.net;user id=ubromed;persistsecurityinfo=True;sslmode=None;database=medicine</Value>
     </Setting>
   </Settings>
 </SettingsFile>
