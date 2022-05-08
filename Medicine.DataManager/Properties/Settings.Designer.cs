@@ -37,22 +37,22 @@ namespace Medicine.DataManager.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=sg2nlmysql53plsk.secureserver.net;user id=ubromed;password=ubro_medicine@0" +
-            "101;database=medicine;persistsecurityinfo=True")]
-        public string medicineConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("server=sql6.freemysqlhosting.net;user id=sql6490744;database=sql6490744;password=" +
+            "iK8BwdGvDe;persistsecurityinfo=True;sslmode=None;port=3306")]
+        public string medicine {
             get {
-                return ((string)(this["medicineConnectionString"]));
+                return ((string)(this["medicine"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=sg2nlmysql53plsk.secureserver.net;user id=ubromed;persistsecurityinfo=True" +
-            ";sslmode=None;database=medicine")]
-        public string medicineConnectionString1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("server=sql6.freemysqlhosting.net;user id=sql6490744;persistsecurityinfo=True;sslm" +
+            "ode=None;database=sql6490744")]
+        public string sql6490744ConnectionString {
             get {
-                return ((string)(this["medicineConnectionString1"]));
+                return ((string)(this["sql6490744ConnectionString"]));
             }
         }
     }

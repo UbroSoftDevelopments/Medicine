@@ -10,21 +10,21 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLlocalDB;Initial Catalog=IODatabase;Integrated Security=True</Value>
     </Setting>
-    <Setting Name="medicineConnectionString" Type="(Connection string)" Scope="Application">
+    <Setting Name="medicine" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;server=sg2nlmysql53plsk.secureserver.net;user id=ubromed;password=ubro_medicine@0101;database=medicine;persistsecurityinfo=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;server=sql6.freemysqlhosting.net;user id=sql6490744;database=sql6490744;password=iK8BwdGvDe;persistsecurityinfo=True;sslmode=None;port=3306&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">server=sg2nlmysql53plsk.secureserver.net;user id=ubromed;password=ubro_medicine@0101;database=medicine;persistsecurityinfo=True</Value>
+      <Value Profile="(Default)">server=sql6.freemysqlhosting.net;user id=sql6490744;database=sql6490744;password=iK8BwdGvDe;persistsecurityinfo=True;sslmode=None;port=3306</Value>
     </Setting>
-    <Setting Name="medicineConnectionString1" Type="(Connection string)" Scope="Application">
+    <Setting Name="sql6490744ConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;server=sg2nlmysql53plsk.secureserver.net;user id=ubromed;persistsecurityinfo=True;sslmode=None;database=medicine&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;server=sql6.freemysqlhosting.net;user id=sql6490744;persistsecurityinfo=True;sslmode=None;database=sql6490744&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">server=sg2nlmysql53plsk.secureserver.net;user id=ubromed;persistsecurityinfo=True;sslmode=None;database=medicine</Value>
+      <Value Profile="(Default)">server=sql6.freemysqlhosting.net;user id=sql6490744;persistsecurityinfo=True;sslmode=None;database=sql6490744</Value>
     </Setting>
   </Settings>
 </SettingsFile>
