@@ -18386,8 +18386,8 @@ VALUES (@p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT productno, productname, typeno, companyno, comment\r\nFROM     products\r\nWHE" +
-                "RE  (productname LIKE \'%@productname%\')";
+            this._commandCollection[1].CommandText = "SELECT        productno, productname, typeno, companyno, comment\r\nFROM           " +
+                " products\r\nWHERE        (productname LIKE \'@productname%\')";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[2].Connection = this.Connection;

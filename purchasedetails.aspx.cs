@@ -266,7 +266,7 @@ namespace Medicine
 
                 string batchno = txtbatchno.Text;
                 DataManager.DataSet1TableAdapters.productsTableAdapter da = new DataManager.DataSet1TableAdapters.productsTableAdapter();
-                DataSet1.productsDataTable dt = da.GetDataByProductName(name);
+                DataSet1.productsDataTable dt = da.GetDataByProductName();
                 if (dt.Rows.Count <= 0)
                 {
                     da.InsertQuery(name, typeno, companyno, "");
