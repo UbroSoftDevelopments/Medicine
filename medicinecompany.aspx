@@ -35,10 +35,11 @@
         <AlternatingRowStyle BackColor="#F7F7F7" />
         <Columns>
            
+            <asp:BoundField DataField="companyno" HeaderText="companyno" 
+                SortExpression="companyno" InsertVisible="False" ReadOnly="True" />
             <asp:BoundField DataField="companyname" HeaderText="companyname" 
                 SortExpression="companyname" />
-            <asp:BoundField DataField="comment" HeaderText="comment" 
-                SortExpression="comment" />
+            <asp:BoundField DataField="comment" HeaderText="comment" SortExpression="comment" />
         </Columns>
         <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
         <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
@@ -54,7 +55,7 @@
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
         
-        SelectCommand="SELECT * FROM medicinecompany where companyno>=13 ORDER BY [companyno]">
+        SelectCommand="SELECT companyno, companyname, comment FROM medicinecompany WHERE (companyno &gt;= 13) ORDER BY companyno" ProviderName="<%$ ConnectionStrings:sql6490744ConnectionString.ProviderName %>">
     </asp:SqlDataSource>
 
 </div>
