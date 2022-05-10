@@ -27,7 +27,7 @@ namespace Medicine
                 DataSet1.unitDataTable dt = da.GetDataByUnitName(type);
                 if (dt.Rows.Count > 0)
                     throw new Exception("This Unit Has Already Entered!!");
-                da.Insert(type);
+                da.InsertQuery(type);
                 Validation.makeLabelVisible(lblmessage);
                 Validation.setSuccess(lblmessage, "Successfully Entered!!");
                 GridView1.DataBind();

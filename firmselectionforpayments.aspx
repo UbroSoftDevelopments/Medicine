@@ -18,8 +18,8 @@
     </asp:DropDownList>
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-        SelectCommand="SELECT * FROM medicine.medicalstores">
+        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        SelectCommand="SELECT * FROM medicalstores">
     </asp:SqlDataSource>
     <br /><br />
     <asp:Button ID="btselect"  class=" w3-round-xxlarge w3-btn w3-purple" 

@@ -78,10 +78,10 @@
     </asp:GridView>
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-        SelectCommand="SELECT * FROM medicine.medicalstores ORDER BY [sno]"
-        UpdateCommand="update medicine.medicalstores set firmname=@firmname,comment=@comment where sno=@sno"
-        DeleteCommand="delete medicine.medicalstores where sno=@sno">
+        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        SelectCommand="SELECT * FROM medicalstores ORDER BY sno"
+        UpdateCommand="update medicalstores set firmname=@firmname,comment=@comment where sno=@sno"
+        DeleteCommand="delete medicalstores where sno=@sno">
     </asp:SqlDataSource>
 
 </div>

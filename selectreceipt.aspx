@@ -46,8 +46,8 @@
           <SortedDescendingHeaderStyle BackColor="#000065" />
       </asp:GridView>
       <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-          ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-          SelectCommand="SELECT * FROM medicine.customerdetails ORDER BY [receiptno] DESC">
+          ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+          SelectCommand="SELECT * FROM customerdetails ORDER BY receiptno DESC">
       </asp:SqlDataSource>
   </div>
   <div class="w3-col s1 w3-mobile">&nbsp;</div>

@@ -25,7 +25,7 @@ namespace Medicine
                     throw new Exception("Please Enter Medicine Name Carefully!!");
                 string comment = txtcomment.Text;
                 DataManager.DataSet1TableAdapters.medicinecompanyTableAdapter da = new DataManager.DataSet1TableAdapters.medicinecompanyTableAdapter();
-                da.Insert(name, comment);
+                da.InsertQuery(name, comment);
                 Validation.setSuccess(lblmessage, "Successfully Entered !!");
                 GridView1.DataBind();
 

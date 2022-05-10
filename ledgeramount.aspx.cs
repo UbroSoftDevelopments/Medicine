@@ -31,7 +31,7 @@ namespace Medicine
                 txtcountry.Text = "(" + md.Country + ")";
                 lblcreadit.Text = " Credit Amount";
                 DataManager.DataSet1TableAdapters.firmamountTableAdapter da = new DataManager.DataSet1TableAdapters.firmamountTableAdapter();
-                DataSet1.firmamountDataTable dt = da.GetDataBySno(firmno);
+                DataSet1.firmamountDataTable dt = da.GetDataByFirmno(firmno);
 
                 for (int i = 0; i <= dt.Rows.Count - 1; i++)
                 {
@@ -44,7 +44,7 @@ namespace Medicine
                 lblDebit.Text = "Debit Amount";
 
                 DataManager.DataSet1TableAdapters.debitpaymentTableAdapter dpa = new DataManager.DataSet1TableAdapters.debitpaymentTableAdapter();
-                DataSet1.debitpaymentDataTable dpt = dpa.GetDataBySno(firmno);
+                DataSet1.debitpaymentDataTable dpt = dpa.GetDataByFirmno(firmno);
                 for (int i = 0; i <= dpt.Rows.Count - 1; i++)
                 {
                     DataSet1.debitpaymentRow dbr = (DataSet1.debitpaymentRow)dpt.Rows[i];

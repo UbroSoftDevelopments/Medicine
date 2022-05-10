@@ -69,8 +69,8 @@
 </div>
 <br />
       <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-        SelectCommand="SELECT medicine.products.productname + ', Batch: ' + medicine.medicinestock.batchno + ', Expiry Date: ' + FORMAT(medicine.medicinestock.expirydate, 'dd-MMM-yyyy', 'en-US') AS productname, medicine.medicinestock.mfgdate, medicine.medicinestock.expirydate, medicine.medicinestock.boxno, medicine.medicinestock.stripinsidebox, medicine.medicinestock.medicineinsidestrip, medicine.medicinestock.unit, medicine.medicinestock.hsn, medicine.medicinestock.rackno, medicine.medicinestock.productno, medicine.medicinestock.sno FROM medicine.medicinestock INNER JOIN medicine.products ON medicine.medicinestock.productno = medicine.products.productno ORDER BY medicine.products.productno, medicine.medicinestock.expirydate">
+        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        SelectCommand="SELECT products.productname + ', Batch: ' + medicinestock.batchno + ', Expiry Date: ' + FORMAT(medicinestock.expirydate, 'dd-MMM-yyyy', 'en-US') AS productname, medicinestock.mfgdate, medicinestock.expirydate, medicinestock.boxno, medicinestock.stripinsidebox, medicinestock.medicineinsidestrip, medicinestock.unit, medicinestock.hsn, medicinestock.rackno, medicinestock.productno, medicinestock.sno FROM medicinestock INNER JOIN products ON medicinestock.productno = products.productno ORDER BY products.productno, medicinestock.expirydate" ProviderName="<%$ ConnectionStrings:sql6490744ConnectionString.ProviderName %>">
     </asp:SqlDataSource>
     <div class="w3-row">
     <center>
@@ -131,9 +131,9 @@
     </asp:GridView>
     
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
-                ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-                SelectCommand="SELECT * FROM medicine.countersalecart ORDER BY [sno] DESC"
-                DeleteCommand="Delete from medicine.countersalecart where sno=@sno">
+                ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+                SelectCommand="SELECT * FROM countersalecart ORDER BY [sno] DESC"
+                DeleteCommand="Delete from countersalecart where sno=@sno">
             </asp:SqlDataSource>
     
      </div>

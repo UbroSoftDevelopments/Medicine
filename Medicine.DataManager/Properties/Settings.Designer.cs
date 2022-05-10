@@ -37,22 +37,22 @@ namespace Medicine.DataManager.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=sql6.freemysqlhosting.net;user id=sql6490744;database=sql6490744;password=" +
-            "iK8BwdGvDe;persistsecurityinfo=True;sslmode=None;port=3306")]
-        public string medicine {
+        [global::System.Configuration.DefaultSettingValueAttribute("server=sql6.freemysqlhosting.net;user id=sql6490744;persistsecurityinfo=True;sslm" +
+            "ode=None;database=sql6490744;password=iK8BwdGvDe")]
+        public string sql6490744ConnectionString {
             get {
-                return ((string)(this["medicine"]));
+                return ((string)(this["sql6490744ConnectionString"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=sql6.freemysqlhosting.net;user id=sql6490744;persistsecurityinfo=True;sslm" +
-            "ode=None;database=sql6490744")]
-        public string sql6490744ConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\IODatabase.md" +
+            "f;Integrated Security=True;Connect Timeout=30")]
+        public string IODatabaseConnectionString1 {
             get {
-                return ((string)(this["sql6490744ConnectionString"]));
+                return ((string)(this["IODatabaseConnectionString1"]));
             }
         }
     }

@@ -32,7 +32,7 @@ namespace Medicine
                 DataSet1.countersalecartDataTable dt = da.GetDataByMedicineNo(medicineno);
                 if (dt.Rows.Count <= 0)
                 {
-                    da.Insert(medicineno, stripinsidebox, medicineinsidestrip, extra, price, userno);
+                    da.InsertQuery(medicineno, stripinsidebox, medicineinsidestrip, extra, Convert.ToDecimal(price), userno);
                 }
                 else
                 {
@@ -116,7 +116,7 @@ namespace Medicine
                     DataManager.DataSet1TableAdapters.receipt_itemsTableAdapter da = new DataManager.DataSet1TableAdapters.receipt_itemsTableAdapter();
                     string medicinename = ProductUtilities.GetMedicineNameByStockSno(cart.medicineno);
                     int quantity = (cart.stripinsidebox * cart.medicineinsidestrip) + cart.extra;
-                    da.Insert(receiptno, medicinename, quantity, cart.price, cart.medicineno);
+                    da.InsertQuery(receiptno, medicinename, quantity, Convert.ToDecimal(cart.price), cart.medicineno);
                 }
 
 
@@ -155,7 +155,7 @@ namespace Medicine
                     if (txtdate.Text.Equals("") || txtdate.Text.Equals(null) || txtdate.Text.Equals(" "))
                         throw new Exception("Please Select Date!!");
                     DataManager.DataSet1TableAdapters.customerdetailsTableAdapter da = new DataManager.DataSet1TableAdapters.customerdetailsTableAdapter();
-                    da.Insert(txtname.Text, Convert.ToDateTime(txtdate.Text), address, number, reffered, ipno, userno);
+                    da.InsertQuery(txtname.Text, Convert.ToDateTime(txtdate.Text), address, number, reffered, ipno, userno);
                     receiptno = Convert.ToInt32(da.GetNewReceiptNo());
                     if (receiptno <= 0)
                         throw new Exception("Receipt error");
@@ -226,15 +226,15 @@ namespace Medicine
                 string ipnumber = txtipno.Text;
                 if (ipnumber.Equals(""))
                     throw new Exception("Please Enter Ip No.");
-                DataManager.DataSet1TableAdapters.opdformTableAdapter oda = new DataManager.DataSet1TableAdapters.opdformTableAdapter();
-                DataSet1.opdformDataTable odt = oda.GetDataByIPNumber(ipnumber);
+                DataManager.DataSet2TableAdapters.opdformTableAdapter oda = new DataManager.DataSet2TableAdapters.opdformTableAdapter();
+                DataSet2.opdformDataTable odt = oda.GetDataByIPNumber(ipnumber);
                 if (odt.Rows.Count <= 0)
                 {
                     throw new Exception("No Data Found For This Ip Number!!");
                 }
                 else
                 {
-                    DataSet1.opdformRow odr = (DataSet1.opdformRow)odt.Rows[0];
+                    DataSet2.opdformRow odr = (DataSet2.opdformRow)odt.Rows[0];
                     txtname.Text = odr.firstname + " " + odr.lastname;
                     txtaddress.Text = odr.address;
                     txtmobileno.Text = odr.mobileno;

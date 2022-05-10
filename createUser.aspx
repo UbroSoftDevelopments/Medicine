@@ -67,8 +67,8 @@
 </asp:GridView>
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-        SelectCommand="SELECT * FROM medicine.siteusers"></asp:SqlDataSource>
+        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        SelectCommand="SELECT * FROM siteusers"></asp:SqlDataSource>
 
 </div>
 </div>

@@ -17,8 +17,9 @@
                     <asp:DropDownList AutoPostBack="True" ID="drpUsers" runat="server" 
                     CssClass="w3-border w3-border-deep-purple w3-light-gray w3-padding-small w3-round" 
                     DataSourceID="SqlDataSource3" DataTextField="userid" DataValueField="userno" onselectedindexchanged="drpUsers_SelectedIndexChanged"></asp:DropDownList><br />
-                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-                        SelectCommand="SELECT * FROM medicine.siteusers WHERE ([status] = @status) ORDER BY [userid]">
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server"
+                        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+                        SelectCommand="SELECT * FROM siteusers WHERE ([status] = @status) ORDER BY [userid]">
                         <SelectParameters>
                             <asp:Parameter DefaultValue="active" Name="status" Type="String" />
                         </SelectParameters>
@@ -58,9 +59,10 @@
                     
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server"
+                ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
                 
-                SelectCommand="SELECT * FROM medicine.paymentfrommedicine] WHERE (([currentuser] = @currentuser) AND ([dateofpayment] = @dateofpayment))">
+                SelectCommand="SELECT * FROM paymentfrommedicine WHERE ((currentuser = @currentuser) AND ([dateofpayment] = @dateofpayment))">
                 <SelectParameters>
                     <asp:ControlParameter Name="currentuser" ControlID="user" Type="Int32" PropertyName="Value" />
                     <asp:ControlParameter Name="dateofpayment" ControlID="todayDate" Type="DateTime" PropertyName="Value" />

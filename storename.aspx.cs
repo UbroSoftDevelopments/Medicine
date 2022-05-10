@@ -27,7 +27,7 @@ namespace Medicine
                 string state = txtstate.Text;
                 string country = txtcountry.Text;
                 DataManager.DataSet1TableAdapters.medicalstoresTableAdapter da = new DataManager.DataSet1TableAdapters.medicalstoresTableAdapter();
-                da.Insert(name, comment, address, mobileno, state, country);
+                da.InsertQuery(name, comment, address, mobileno, state, country);
                 Validation.makeLabelVisible(lblmessage);
                 Validation.setSuccess(lblmessage, "Successfully Entered!!");
                 GridView1.DataBind();

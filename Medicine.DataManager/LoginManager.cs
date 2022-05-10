@@ -111,7 +111,7 @@ namespace Medicine.DataManager
                 if (sudt.Rows.Count != 0)
                     return "User Already Exists Change User Name";
 
-                suta.Insert(userName, password, "active", userType);
+                suta.InsertQuery(userName, password, "active", userType);
                 return "Success";
             }
             catch (Exception ex)

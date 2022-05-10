@@ -103,11 +103,11 @@
  </div>
     
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
+        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
         
         
         
-        SelectCommand="SELECT sno, productno, batchno, mrp, rateafterdiscount, mfgdate, expirydate, DATEDIFF(day, GETDATE(), expirydate) AS DaysForExpiry, boxno, stripinsidebox, medicineinsidestrip, unit, hsn, rackno FROM medicine.medicinestock WHERE (productno IN (SELECT productno FROM medicine.products WHERE (productname LIKE '%' + @name + '%'))) AND (DATEDIFF(day, GETDATE(), expirydate) <= 60)">
+        SelectCommand="SELECT sno, productno, batchno, mrp, rateafterdiscount, mfgdate, expirydate, DATEDIFF(day, GETDATE(), expirydate) AS DaysForExpiry, boxno, stripinsidebox, medicineinsidestrip, unit, hsn, rackno FROM medicinestock WHERE (productno IN (SELECT productno FROM products WHERE (productname LIKE '%' + @name + '%'))) AND (DATEDIFF(day, GETDATE(), expirydate) <= 60)">
         <SelectParameters>
            
             <asp:ControlParameter ControlID="Txtname" DefaultValue="%" Name="name" 
@@ -216,11 +216,11 @@
  </div>
     
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
+        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
         
         
         
-        SelectCommand="SELECT sno, productno, batchno, mrp, rateafterdiscount, mfgdate, expirydate, DATEDIFF(day, GETDATE(), expirydate) AS DaysForExpiry, boxno, stripinsidebox, medicineinsidestrip, unit, hsn, rackno FROM medicine.medicinestock WHERE (productno IN (SELECT productno FROM medicine.products WHERE (productname LIKE '%' + @name + '%'))) AND (DATEDIFF(day, GETDATE(), expirydate) <= 60)">
+        SelectCommand="SELECT sno, productno, batchno, mrp, rateafterdiscount, mfgdate, expirydate, DATEDIFF(day, GETDATE(), expirydate) AS DaysForExpiry, boxno, stripinsidebox, medicineinsidestrip, unit, hsn, rackno FROM medicinestock WHERE (productno IN (SELECT productno FROM products WHERE (productname LIKE '%' + @name + '%'))) AND (DATEDIFF(day, GETDATE(), expirydate) <= 60)">
         <SelectParameters>
            
             <asp:ControlParameter ControlID="Txtname" DefaultValue="%" Name="name" 

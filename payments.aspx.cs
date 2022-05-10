@@ -54,7 +54,7 @@ namespace Medicine
                 string comment = txtcomment.Text;
 
                 DataManager.DataSet1TableAdapters.firmamountTableAdapter da = new DataManager.DataSet1TableAdapters.firmamountTableAdapter();
-                da.Insert(firmno, customerbillno, (float)amount, date, comment);
+                da.InsertQuery(firmno, customerbillno, Convert.ToDecimal((float)amount), date, comment);
                 Validation.makeLabelVisible(lblmessage);
                 Validation.setSuccess(lblmessage, "Successfully Addedd");
                 GridView1.DataBind();

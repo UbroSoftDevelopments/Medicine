@@ -100,10 +100,10 @@
        </asp:GridView>
    
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-            SelectCommand="SELECT * FROM medicine.firmamount WHERE ([firmno] = @firmno) ORDER BY [date]"
-              UpdateCommand="update medicine.firmamount set amount=@amount,customerbillno=@customerbillno,comment=@comment,date=@date where sno=@sno"
-            DeleteCommand="delete from medicine.firmamount where sno=@sno"
+            ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+            SelectCommand="SELECT * FROM firmamount WHERE firmno = @firmno ORDER BY date"
+              UpdateCommand="update firmamount set amount=@amount,customerbillno=@customerbillno,comment=@comment,date=@date where sno=@sno"
+            DeleteCommand="delete from firmamount where sno=@sno"
             >
             <SelectParameters>
                 <asp:QueryStringParameter Name="firmno" QueryStringField="sno" Type="Int32" />

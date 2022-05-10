@@ -48,8 +48,8 @@
         </asp:DropDownList>
       
         <asp:SqlDataSource ID="SqlDataSource3" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-            SelectCommand="SELECT * FROM medicine.medicinecompany ORDER BY [companyno]">
+            ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+            SelectCommand="SELECT * FROM medicinecompany ORDER BY companyno">
         </asp:SqlDataSource>
 
     </p>
@@ -72,8 +72,8 @@
 
 
           <asp:SqlDataSource ID="SqlDataSource4" runat="server" 
-              ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-              SelectCommand="SELECT * FROM medicine.unit ORDER BY [sno]">
+              ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+              SelectCommand="SELECT * FROM unit ORDER BY sno">
           </asp:SqlDataSource>
       </p>
       </div>
@@ -158,8 +158,8 @@
         <asp:ListItem Selected="True" Text="--Select Medicine--" Value="-1"></asp:ListItem>
     </asp:DropDownList> 
      <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-        SelectCommand="SELECT * FROM medicine.products ORDER BY [productno]">
+        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        SelectCommand="SELECT * FROM products ORDER BY productno">
     </asp:SqlDataSource>
     </div>
     
@@ -171,8 +171,8 @@
             onselectedindexchanged="ddbatchno_SelectedIndexChanged" OnDataBound="batchSelectedDefault">
         </asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSource5" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-            SelectCommand="SELECT * FROM medicine.productbatch WHERE ([productno] = @productno)">
+            ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+            SelectCommand="SELECT * FROM productbatch WHERE (productno = @productno)">
             <SelectParameters>
                 <asp:ControlParameter ControlID="ddproductno" Name="productno" 
                     PropertyName="SelectedValue" Type="Int32" />
@@ -254,8 +254,8 @@
 
 </div>
       <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-        SelectCommand="SELECT * FROM medicine.unit WHERE sno>=1 ORDER BY [sno]">
+        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        SelectCommand="SELECT * FROM unit WHERE sno>=1 ORDER BY sno">
         <SelectParameters>
             <asp:Parameter DefaultValue="1" Name="sno" Type="Int32" />
         </SelectParameters>
@@ -333,9 +333,9 @@
 
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource6" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-        SelectCommand="SELECT * FROM medicine.purchasecart ORDER BY [sno]"
-        DeleteCommand="Delete from medicine.purchasecart where sno=@sno">
+        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        SelectCommand="SELECT * FROM purchasecart ORDER BY sno"
+        DeleteCommand="Delete from purchasecart where sno=@sno">
     </asp:SqlDataSource>
     </div>
     </div>

@@ -53,7 +53,7 @@ namespace Medicine.DataManager
         {
             DataSet1TableAdapters.receipt_itemsTableAdapter da = new DataSet1TableAdapters.receipt_itemsTableAdapter();
             foreach (CartItem cartitem in cartitems.Values)
-                da.Insert(receiptno, "" + cartitem.ProductName, cartitem.Quantity, Math.Round(cartitem.Price, 2), cartitem.serial());
+                da.InsertQuery(receiptno, "" + cartitem.ProductName, cartitem.Quantity, Convert.ToDecimal(Math.Round(cartitem.Price, 2)), cartitem.serial());
         }
         public void Clear()
         {

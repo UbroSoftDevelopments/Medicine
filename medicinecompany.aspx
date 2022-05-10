@@ -52,9 +52,9 @@
     </asp:GridView>
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
+        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
         
-        SelectCommand="SELECT * FROM medicine.medicinecompany where companyno>=13 ORDER BY [companyno]">
+        SelectCommand="SELECT * FROM medicinecompany where companyno>=13 ORDER BY [companyno]">
     </asp:SqlDataSource>
 
 </div>

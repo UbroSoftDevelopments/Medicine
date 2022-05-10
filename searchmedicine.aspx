@@ -140,8 +140,8 @@
  </div>
     
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-        SelectCommand="SELECT sno, productno, batchno, mrp, rateafterdiscount, mfgdate, expirydate, boxno, stripinsidebox, medicineinsidestrip, unit, hsn, rackno FROM medicine.medicinestock WHERE (productno IN (SELECT TOP (100) PERCENT productno FROM medicine.products WHERE (productname LIKE '%' + @name + '%') ORDER BY productname))">
+        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        SelectCommand="SELECT sno, productno, batchno, mrp, rateafterdiscount, mfgdate, expirydate, boxno, stripinsidebox, medicineinsidestrip, unit, hsn, rackno FROM medicinestock WHERE (productno IN (SELECT TOP (100) PERCENT productno FROM products WHERE (productname LIKE '%' + @name + '%') ORDER BY productname))">
         <SelectParameters>
             <asp:ControlParameter ControlID="Txtname" DefaultValue="%" Name="name" 
                 PropertyName="Text" />

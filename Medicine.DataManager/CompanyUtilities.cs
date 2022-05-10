@@ -9,7 +9,7 @@ using Medicine.DataManager;
 /// </summary>
 public class CompanyUtilities
 {
-    public bool valid = false;
+   public bool valid = false;
    public  int companyno;
    public string companyname, comment;
 	public CompanyUtilities(int companyno,string companyname,string comment)

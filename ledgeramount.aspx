@@ -76,8 +76,8 @@
 
    
        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-           ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-           SelectCommand="SELECT * FROM medicine.firmamount WHERE ([firmno] = @firmno) ORDER BY [date]">
+           ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+           SelectCommand="SELECT * FROM firmamount WHERE ([firmno] = @firmno) ORDER BY [date]">
            <SelectParameters>
                <asp:QueryStringParameter Name="firmno" QueryStringField="sno" Type="Int32" />
            </SelectParameters>
@@ -138,8 +138,8 @@
 
    
        <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
-           ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
-           SelectCommand="SELECT * FROM medicine.debitpayment WHERE ([firmno] = @firmno) ORDER BY [date]">
+           ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+           SelectCommand="SELECT * FROM debitpayment WHERE ([firmno] = @firmno) ORDER BY [date]">
            <SelectParameters>
                <asp:QueryStringParameter Name="firmno" QueryStringField="sno" Type="Int32" />
            </SelectParameters>

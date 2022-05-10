@@ -51,7 +51,7 @@ public class PurchaseCart
         {
             int newsno = MedicineEntryInStockcs.UpdateMedicineInStock(cartitem.ProductNo, cartitem.BoxNo, cartitem.StripInsideBox, cartitem.MedicineInsideStrip,cartitem.RackNo, cartitem.price(), cartitem.MRP, cartitem.BatchNo, cartitem.Hsn, cartitem.Unit(),Convert.ToDateTime( cartitem.ExpiryDate),Convert.ToDateTime( cartitem.MfgDate));
 
-            da.InsertQuery(billno, cartitem.ProductName, cartitem.BatchNo, cartitem.price(), cartitem.MRP, Convert.ToDateTime(cartitem.MfgDate), Convert.ToDateTime(cartitem.ExpiryDate), cartitem.BoxNo, cartitem.StripInsideBox, cartitem.MedicineInsideStrip, cartitem.Unit(), cartitem.Hsn, /*cartitem.ProductNo*/newsno);
+            da.InsertQuery(billno, cartitem.ProductName, cartitem.BatchNo, Convert.ToDecimal(cartitem.MRP), Convert.ToDecimal(cartitem.price()), Convert.ToDateTime(cartitem.MfgDate), cartitem.BoxNo, cartitem.StripInsideBox, cartitem.Unit(), cartitem.Hsn, newsno, Convert.ToDateTime(cartitem.ExpiryDate), cartitem.MedicineInsideStrip/*cartitem.ProductNo*/);
 
         }
           
