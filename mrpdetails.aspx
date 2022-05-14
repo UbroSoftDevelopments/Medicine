@@ -52,7 +52,7 @@
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
-        SelectCommand="SELECT * FROM medicinestock WHERE ([productno] = @productno) ORDER BY [mrp]">
+        SelectCommand="SELECT * FROM medicinestock WHERE (productno = @productno) ORDER BY mrp">
         <SelectParameters>
             <asp:QueryStringParameter Name="productno" QueryStringField="pno" 
                 Type="Int32" />

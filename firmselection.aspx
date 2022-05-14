@@ -19,7 +19,7 @@
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
-        SelectCommand="SELECT * FROM medicalstores ORDER BY [firmname]">
+        SelectCommand="SELECT * FROM medicalstores ORDER BY firmname">
     </asp:SqlDataSource>
     <br /><br />
     <asp:Button ID="btselect"  class=" w3-round-xxlarge w3-btn w3-purple" 

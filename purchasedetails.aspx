@@ -255,10 +255,7 @@
 </div>
       <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
-        SelectCommand="SELECT * FROM unit WHERE sno>=1 ORDER BY sno">
-        <SelectParameters>
-            <asp:Parameter DefaultValue="1" Name="sno" Type="Int32" />
-        </SelectParameters>
+        SelectCommand="SELECT sno, unit FROM unit WHERE (sno &gt;= 1) ORDER BY sno" ProviderName="<%$ ConnectionStrings:sql6490744ConnectionString.ProviderName %>">
     </asp:SqlDataSource>
 
 
@@ -286,39 +283,24 @@
         <AlternatingRowStyle BackColor="White" />
         <Columns>
          
-            <asp:CommandField ShowDeleteButton="True" />
-         
-            <asp:BoundField DataField="billno" HeaderText="Bill No" 
-                SortExpression="billno" />
-               <asp:TemplateField HeaderText="Product Name">
-            <ItemTemplate>
-            <%#ProductUtilities.GetProductNameByProductNo(Convert.ToInt32(Eval("productno"))) %>
-            </ItemTemplate>
-            </asp:TemplateField>
-            <asp:TemplateField HeaderText="Product Quantity">
-            <ItemTemplate>
-            <%#ProductUtilities.GetTotalMedicineQuantity(Convert.ToInt32(Eval("boxno")),Convert.ToInt32(Eval("stripinsidebox")),Convert.ToInt32(Eval("medicineinsidestrip"))) %>
-            </ItemTemplate>
-            </asp:TemplateField>
+            <asp:BoundField DataField="sno" HeaderText="sno" 
+                SortExpression="sno" InsertVisible="False" ReadOnly="True" />
            
-            <asp:BoundField DataField="unit" HeaderText="Unit" SortExpression="unit" />
-            <asp:BoundField DataField="batchno" HeaderText="Batch No" 
-                SortExpression="batchno" />
-            <asp:BoundField DataField="hsnno" HeaderText="HSN No." SortExpression="hsnno" />
-            <asp:BoundField DataField="mrp" HeaderText="Mrp" SortExpression="mrp" />
-            <asp:TemplateField HeaderText="MFG Date">
-            <ItemTemplate>
-            <%#DateUtilities.dateFormat(Convert.ToDateTime(Eval("mfgdate"))) %>
-            </ItemTemplate>
-            </asp:TemplateField>
-              <asp:TemplateField HeaderText="Expiry Date">
-            <ItemTemplate>
-            <%#DateUtilities.dateFormat(Convert.ToDateTime(Eval("expirydate"))) %>
-            </ItemTemplate>
-            </asp:TemplateField>
+            <asp:BoundField DataField="billno" HeaderText="billno" SortExpression="billno" />
+            <asp:BoundField DataField="productno" HeaderText="productno" 
+                SortExpression="productno" />
+            <asp:BoundField DataField="boxno" HeaderText="boxno" SortExpression="boxno" />
+            <asp:BoundField DataField="stripinsidebox" HeaderText="stripinsidebox" SortExpression="stripinsidebox" />
            
-            <asp:BoundField DataField="rackno" HeaderText="Rackno" 
-                SortExpression="rackno" />
+            <asp:BoundField DataField="medicineinsidestrip" HeaderText="medicineinsidestrip" 
+                SortExpression="medicineinsidestrip" />
+            <asp:BoundField DataField="unit" HeaderText="unit" SortExpression="unit" />
+            <asp:BoundField DataField="batchno" HeaderText="batchno" SortExpression="batchno" />
+            <asp:BoundField DataField="hsnno" HeaderText="hsnno" SortExpression="hsnno" />
+            <asp:BoundField DataField="mrp" HeaderText="mrp" SortExpression="mrp" />
+            <asp:BoundField DataField="mfgdate" HeaderText="mfgdate" SortExpression="mfgdate" />
+            <asp:BoundField DataField="expirydate" HeaderText="expirydate" SortExpression="expirydate" />
+            <asp:BoundField DataField="rackno" HeaderText="rackno" SortExpression="rackno" />
         </Columns>
         <EditRowStyle BackColor="#2461BF" />
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -335,7 +317,7 @@
     <asp:SqlDataSource ID="SqlDataSource6" runat="server" 
         ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
         SelectCommand="SELECT * FROM purchasecart ORDER BY sno"
-        DeleteCommand="Delete from purchasecart where sno=@sno">
+        DeleteCommand="Delete from purchasecart where sno=@sno" ProviderName="<%$ ConnectionStrings:sql6490744ConnectionString.ProviderName %>">
     </asp:SqlDataSource>
     </div>
     </div>

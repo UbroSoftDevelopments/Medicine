@@ -19,7 +19,7 @@
                     DataSourceID="SqlDataSource3" DataTextField="userid" DataValueField="userno" onselectedindexchanged="drpUsers_SelectedIndexChanged"></asp:DropDownList><br />
                     <asp:SqlDataSource ID="SqlDataSource3" runat="server"
                         ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
-                        SelectCommand="SELECT * FROM siteusers WHERE ([status] = @status) ORDER BY [userid]">
+                        SelectCommand="SELECT * FROM siteusers WHERE (status = @status) ORDER BY userid">
                         <SelectParameters>
                             <asp:Parameter DefaultValue="active" Name="status" Type="String" />
                         </SelectParameters>
@@ -62,7 +62,7 @@
             <asp:SqlDataSource ID="SqlDataSource1" runat="server"
                 ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
                 
-                SelectCommand="SELECT * FROM paymentfrommedicine WHERE ((currentuser = @currentuser) AND ([dateofpayment] = @dateofpayment))">
+                SelectCommand="SELECT * FROM paymentfrommedicine WHERE ((currentuser = @currentuser) AND (dateofpayment = @dateofpayment))">
                 <SelectParameters>
                     <asp:ControlParameter Name="currentuser" ControlID="user" Type="Int32" PropertyName="Value" />
                     <asp:ControlParameter Name="dateofpayment" ControlID="todayDate" Type="DateTime" PropertyName="Value" />

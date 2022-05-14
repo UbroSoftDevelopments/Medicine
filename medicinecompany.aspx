@@ -55,7 +55,7 @@
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
         
-        SelectCommand="SELECT companyno, companyname, comment FROM medicinecompany WHERE (companyno &gt;= 13) ORDER BY companyno" ProviderName="<%$ ConnectionStrings:sql6490744ConnectionString.ProviderName %>">
+        SelectCommand="SELECT companyno, companyname, comment FROM medicinecompany WHERE (companyno >= 13) ORDER BY companyno" ProviderName="<%$ ConnectionStrings:sql6490744ConnectionString.ProviderName %>">
     </asp:SqlDataSource>
 
 </div>

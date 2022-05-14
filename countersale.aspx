@@ -95,29 +95,16 @@
                 DataSourceID="SqlDataSource2" ondatabound="GridView1_DataBound">
         <AlternatingRowStyle BackColor="#F7F7F7" />
         <Columns>
-            <asp:CommandField ShowDeleteButton="True" />
-           <asp:TemplateField HeaderText="Medicine Name">
-            <ItemTemplate>
-             <%# ProductUtilities.GetMedicineNameByStockSno(Convert.ToInt32(Eval("medicineno")))%>
-            </ItemTemplate>
-           </asp:TemplateField>
           
-            <asp:BoundField DataField="stripinsidebox" HeaderText="stripInside Box" 
-                SortExpression="stripinsidebox" />
-            <asp:BoundField DataField="medicineinsidestrip" 
-                HeaderText="MedicineInside Strip" SortExpression="medicineinsidestrip" />
-            <asp:BoundField DataField="extra" HeaderText="Extra Medicine" SortExpression="extra" />
-            <asp:BoundField DataField="price" HeaderText="Price(Per Piece)" SortExpression="price" />
-            <asp:TemplateField HeaderText="Quantity">
-             <ItemTemplate>
-              <%# (Convert.ToInt32(Eval("stripinsidebox")) * Convert.ToInt32(Eval("medicineinsidestrip"))) + Convert.ToInt32(Eval("extra"))%>
-             </ItemTemplate>
-            </asp:TemplateField>
-            <asp:TemplateField HeaderText="Amount">
-            <ItemTemplate>
-             <%# ((Convert.ToInt32(Eval("stripinsidebox")) * Convert.ToInt32(Eval("medicineinsidestrip"))) + Convert.ToInt32(Eval("extra")))*Convert.ToDouble(Eval("price"))%>
-            </ItemTemplate>
-           </asp:TemplateField>
+            <asp:BoundField DataField="sno" HeaderText="sno" 
+                SortExpression="sno" InsertVisible="False" ReadOnly="True" />
+            <asp:BoundField DataField="medicineno" 
+                HeaderText="medicineno" SortExpression="medicineno" />
+            <asp:BoundField DataField="stripinsidebox" HeaderText="stripinsidebox" SortExpression="stripinsidebox" />
+            <asp:BoundField DataField="medicineinsidestrip" HeaderText="medicineinsidestrip" SortExpression="medicineinsidestrip" />
+            <asp:BoundField DataField="extra" HeaderText="extra" SortExpression="extra" />
+            <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" />
+            <asp:BoundField DataField="userno" HeaderText="userno" SortExpression="userno" />
         </Columns>
         <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
         <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
@@ -132,8 +119,8 @@
     
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
-                SelectCommand="SELECT * FROM countersalecart ORDER BY [sno] DESC"
-                DeleteCommand="Delete from countersalecart where sno=@sno">
+                SelectCommand="SELECT sno, medicineno, stripinsidebox, medicineinsidestrip, extra, price, userno FROM countersalecart ORDER BY sno DESC"
+                DeleteCommand="Delete from countersalecart where sno=@sno" ProviderName="<%$ ConnectionStrings:sql6490744ConnectionString.ProviderName %>">
             </asp:SqlDataSource>
     
      </div>

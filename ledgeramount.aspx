@@ -77,7 +77,7 @@
    
        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
            ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
-           SelectCommand="SELECT * FROM firmamount WHERE ([firmno] = @firmno) ORDER BY [date]">
+           SelectCommand="SELECT * FROM firmamount WHERE (firmno = @firmno) ORDER BY date">
            <SelectParameters>
                <asp:QueryStringParameter Name="firmno" QueryStringField="sno" Type="Int32" />
            </SelectParameters>
