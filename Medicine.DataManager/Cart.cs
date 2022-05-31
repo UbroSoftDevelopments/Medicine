@@ -29,7 +29,7 @@ namespace Medicine.DataManager
                 totalquantity = totalquantity + cartitem.Quantity;
 
             }
-            cartitems.Remove(sno);  
+            cartitems.Remove(sno);
             CartItem newitem = new CartItem(sno, totalquantity, medicineincidestrip, stripinsidebox, extra, price);
             if (totalquantity <= 0)
                 return;
@@ -53,7 +53,7 @@ namespace Medicine.DataManager
         {
             DataSet1TableAdapters.receipt_itemsTableAdapter da = new DataSet1TableAdapters.receipt_itemsTableAdapter();
             foreach (CartItem cartitem in cartitems.Values)
-                da.InsertQuery(receiptno, "" + cartitem.ProductName, cartitem.Quantity, Convert.ToDecimal(Math.Round(cartitem.Price, 2)), cartitem.serial());
+                da.InsertQuery(receiptno, "" + cartitem.ProductName, cartitem.Quantity, Math.Round(cartitem.Price, 2), cartitem.serial());
         }
         public void Clear()
         {

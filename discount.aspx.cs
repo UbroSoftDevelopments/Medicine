@@ -80,10 +80,10 @@ namespace Medicine
                 if (discount < 0)
                     throw new Exception("Discount Must Not Less Than Zero !!");
                 DataManager.DataSet1TableAdapters.discountinmedicineTableAdapter dm = new DataManager.DataSet1TableAdapters.discountinmedicineTableAdapter();
-                dm.InsertQuery(receiptno, Convert.ToDecimal(discount), (Convert.ToDateTime(lbldateOfEntry.Text)));
+                dm.InsertQuery(receiptno,discount, (Convert.ToDateTime(lbldateOfEntry.Text)));
                 double amount = totalamount - discount;
                 DataManager.DataSet1TableAdapters.paymentfrommedicineTableAdapter da = new DataManager.DataSet1TableAdapters.paymentfrommedicineTableAdapter();
-                da.InsertQuery(date, Convert.ToDecimal(Math.Round(amount, 2)), receiptno, userno);
+                da.InsertQuery(date, Math.Round(amount, 2), receiptno, userno);
                 Response.Redirect("printreceipt.aspx?receiptno=" + Request.QueryString["receiptno"]);
             }
             catch (Exception ex)
@@ -95,7 +95,7 @@ namespace Medicine
         protected void btskip_Click(object sender, EventArgs e)
         {
             DataManager.DataSet1TableAdapters.paymentfrommedicineTableAdapter da = new DataManager.DataSet1TableAdapters.paymentfrommedicineTableAdapter();
-            da.InsertQuery(date, Convert.ToDecimal(Math.Round(totalamount, 2)), receiptno, userno);
+            da.InsertQuery(date, Math.Round(totalamount, 2), receiptno, userno);
             Response.Redirect("printreceipt.aspx?receiptno=" + Request.QueryString["receiptno"]);
         }
     }

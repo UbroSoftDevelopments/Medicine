@@ -29,16 +29,16 @@
     <div class="w3-container w3-text-red w3-mobile w3-row" style="background: linear-gradient(to bottom, #0099ff 0%, #ccffff 100%)">
         <div class="w3-col s2 w3-margin-bottom w3-margin-top w3-center">
         
-        <img src="Resources/geetanjaliLogo.png" alt="Logo" height="125" width="125"/>
+        <img src="Resources/Title_UB.png" alt="Logo" height="125" width="125"/>
         </div>
 
         <div class="w3-col s10">
         <label class="w3-left">AN ISO : 9001:2015 CERTIFIED HOSPITAL</label>
         <label class="w3-right">Reged No. : CMO/HOP/21/MZP</label><br/>
-        <label class="w3-xxlarge w3-text-red w3-center">लाइफ केयर हॉस्पिटल एंड सर्जिकल सेंटर
-ट्रामा क्रिटिकल केयर</label>
+        <label class="w3-xxlarge w3-text-red w3-center">UBROSOFT HOSPITAL MEDICINE MANAGEMENT SOFTWARE</label>
         <br />
-        <label class="w3-xlarge w3-text-red w3-center">Mirzapur - Varanasi Road, Milkipur Uttar Pradesh 231305</label>
+        <label class="w3-xlarge w3-text-red w3-center">Samne Ghat Road,
+Near BHU Trauma Centre, Varanasi, Uttar Pradesh, India - 221005</label>
         
         
         </div>
@@ -153,7 +153,7 @@
   <div class="w3-row w3-aqua glossButton w3-text-white">
   <br /><br />
   <img src="Resources/welcome.png" alt="welcome" width="60%" />
-  <center><h2><b>Welcome To Geetanjali Hospital<br />
+  <center><h2><b>Welcome To UBROSOFT Hospital<br />
   Medicine Management</b>
   </h2></center><br /><br /><br />
   </div>
@@ -166,7 +166,7 @@
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">       
         </asp:ContentPlaceHolder>
         <br /><br /><br />
-         <div class="w3-bottombar w3-gray w3-large w3-mobile w3-center w3-opacity">Copyright &copy; Geetanjali Life Care</div>
+         <div class="w3-bottombar w3-gray w3-large w3-mobile w3-center w3-opacity">Copyright &copy; UBROSOFT</div>
         <br /><br /><br />
        
     </div>

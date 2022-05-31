@@ -50,7 +50,7 @@ namespace Medicine
                     throw new Exception("Please Enter Valid Amount");
                 string comment = txtcomment.Text;
                 DataManager.DataSet1TableAdapters.debitpaymentTableAdapter da = new DataManager.DataSet1TableAdapters.debitpaymentTableAdapter();
-                da.InsertQuery(firmno, date, Convert.ToDecimal((float)amount), comment);
+                da.InsertQuery(firmno, date, (float)amount, comment);
                 Validation.makeLabelVisible(lblmessage);
                 Validation.setSuccess(lblmessage, "Successfully Addedd");
                 GridView1.DataBind();

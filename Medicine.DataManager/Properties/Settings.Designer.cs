@@ -26,8 +26,8 @@ namespace Medicine.DataManager.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLlocalDB;Initial Catalog=IODatabase;Integrated Security" +
-            "=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Lenovo\\IODatabase.md" +
+            "f;Integrated Security=True;Connect Timeout=30")]
         public string IODatabaseConnectionString {
             get {
                 return ((string)(this["IODatabaseConnectionString"]));
@@ -37,22 +37,11 @@ namespace Medicine.DataManager.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=sql6.freemysqlhosting.net;user id=sql6490744;persistsecurityinfo=True;sslm" +
-            "ode=None;database=sql6490744;password=iK8BwdGvDe")]
-        public string sql6490744ConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLlocaldb;Initial Catalog=medicine;Integrated Security=T" +
+            "rue")]
+        public string medicineConnectionString {
             get {
-                return ((string)(this["sql6490744ConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\IODatabase.md" +
-            "f;Integrated Security=True;Connect Timeout=30")]
-        public string IODatabaseConnectionString1 {
-            get {
-                return ((string)(this["IODatabaseConnectionString1"]));
+                return ((string)(this["medicineConnectionString"]));
             }
         }
     }

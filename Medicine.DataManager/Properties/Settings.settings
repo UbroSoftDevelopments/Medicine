@@ -5,26 +5,18 @@
     <Setting Name="IODatabaseConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=(LocalDB)\MSSQLlocalDB;Initial Catalog=IODatabase;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo\IODatabase.mdf;Integrated Security=True;Connect Timeout=30&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLlocalDB;Initial Catalog=IODatabase;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo\IODatabase.mdf;Integrated Security=True;Connect Timeout=30</Value>
     </Setting>
-    <Setting Name="sql6490744ConnectionString" Type="(Connection string)" Scope="Application">
+    <Setting Name="medicineConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;server=sql6.freemysqlhosting.net;user id=sql6490744;persistsecurityinfo=True;sslmode=None;database=sql6490744;password=iK8BwdGvDe&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">server=sql6.freemysqlhosting.net;user id=sql6490744;persistsecurityinfo=True;sslmode=None;database=sql6490744;password=iK8BwdGvDe</Value>
-    </Setting>
-    <Setting Name="IODatabaseConnectionString1" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\IODatabase.mdf;Integrated Security=True;Connect Timeout=30&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=(localdb)\MSSQLlocaldb;Initial Catalog=medicine;Integrated Security=True&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\IODatabase.mdf;Integrated Security=True;Connect Timeout=30</Value>
+      <Value Profile="(Default)">Data Source=(localdb)\MSSQLlocaldb;Initial Catalog=medicine;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

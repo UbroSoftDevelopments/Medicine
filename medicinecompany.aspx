@@ -30,17 +30,9 @@
 <div  class=" w3-col s8 w3-mobile w3-centered">
     <asp:GridView ID="GridView1" style="width:100%" runat="server" AutoGenerateColumns="False" 
         BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" 
-        CellPadding="3" DataKeyNames="companyno" DataSourceID="SqlDataSource1" 
+        CellPadding="3" DataSourceID="SqlDataSource1" 
         GridLines="Horizontal">
         <AlternatingRowStyle BackColor="#F7F7F7" />
-        <Columns>
-           
-            <asp:BoundField DataField="companyno" HeaderText="companyno" 
-                SortExpression="companyno" InsertVisible="False" ReadOnly="True" />
-            <asp:BoundField DataField="companyname" HeaderText="companyname" 
-                SortExpression="companyname" />
-            <asp:BoundField DataField="comment" HeaderText="comment" SortExpression="comment" />
-        </Columns>
         <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
         <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
         <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
@@ -53,9 +45,9 @@
     </asp:GridView>
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
         
-        SelectCommand="SELECT companyno, companyname, comment FROM medicinecompany WHERE (companyno >= 13) ORDER BY companyno" ProviderName="<%$ ConnectionStrings:sql6490744ConnectionString.ProviderName %>">
+        SelectCommand="SELECT companyno, companyname, comment FROM medicinecompany WHERE (companyno >= 13) ORDER BY companyno" ProviderName="<%$ ConnectionStrings:medicineConnectionString.ProviderName %>">
     </asp:SqlDataSource>
 
 </div>

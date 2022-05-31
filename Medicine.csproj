@@ -185,6 +185,7 @@
     <Content Include="Resources\search1.jpg" />
     <Content Include="Resources\searchoriginal.png" />
     <Content Include="Resources\setting.png" />
+    <Content Include="Resources\Title_UB.png" />
     <Content Include="Resources\welcome.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

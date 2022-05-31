@@ -17,8 +17,8 @@ public class PurchaseCart
     }
     public void AddtoCart(PurchaseItemDetails item)
     {
-       cartitems.Add(item.ProductNo,item);
-      
+        cartitems.Add(item.ProductNo, item);
+
     }
     public void RemoveFromCart(int productno)
     {
@@ -49,12 +49,11 @@ public class PurchaseCart
         Medicine.DataManager.DataSet1TableAdapters.medicinestockTableAdapter dda = new Medicine.DataManager.DataSet1TableAdapters.medicinestockTableAdapter();
         foreach (PurchaseItemDetails cartitem in cartitems.Values)
         {
-            int newsno = MedicineEntryInStockcs.UpdateMedicineInStock(cartitem.ProductNo, cartitem.BoxNo, cartitem.StripInsideBox, cartitem.MedicineInsideStrip,cartitem.RackNo, cartitem.price(), cartitem.MRP, cartitem.BatchNo, cartitem.Hsn, cartitem.Unit(),Convert.ToDateTime( cartitem.ExpiryDate),Convert.ToDateTime( cartitem.MfgDate));
-
-            da.InsertQuery(billno, cartitem.ProductName, cartitem.BatchNo, Convert.ToDecimal(cartitem.MRP), Convert.ToDecimal(cartitem.price()), Convert.ToDateTime(cartitem.MfgDate), cartitem.BoxNo, cartitem.StripInsideBox, cartitem.Unit(), cartitem.Hsn, newsno, Convert.ToDateTime(cartitem.ExpiryDate), cartitem.MedicineInsideStrip/*cartitem.ProductNo*/);
+            int newsno = MedicineEntryInStockcs.UpdateMedicineInStock(cartitem.ProductNo, cartitem.BoxNo, cartitem.StripInsideBox, cartitem.MedicineInsideStrip, cartitem.RackNo, cartitem.price(), cartitem.MRP, cartitem.BatchNo, cartitem.Hsn, cartitem.Unit(), Convert.ToDateTime(cartitem.ExpiryDate), Convert.ToDateTime(cartitem.MfgDate));
+            da.InsertQuery(billno, cartitem.ProductName, cartitem.BatchNo, cartitem.price(), cartitem.MRP, Convert.ToDateTime(cartitem.MfgDate), Convert.ToInt32(cartitem.ExpiryDate), cartitem.BoxNo, cartitem.StripInsideBox, Convert.ToString(cartitem.MedicineInsideStrip), cartitem.Unit(), Convert.ToDateTime(cartitem.Hsn), /*cartitem.ProductNo*/newsno);
 
         }
-          
+
 
     }
     public void Clear()

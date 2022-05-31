@@ -32,7 +32,7 @@ namespace Medicine
                 DataSet1.countersalecartDataTable dt = da.GetDataByMedicineNo(medicineno);
                 if (dt.Rows.Count <= 0)
                 {
-                    da.InsertQuery(medicineno, stripinsidebox, medicineinsidestrip, extra, Convert.ToDecimal(price), userno);
+                    da.InsertQuery(medicineno, stripinsidebox, medicineinsidestrip, extra, price, userno);
                 }
                 else
                 {
@@ -116,7 +116,7 @@ namespace Medicine
                     DataManager.DataSet1TableAdapters.receipt_itemsTableAdapter da = new DataManager.DataSet1TableAdapters.receipt_itemsTableAdapter();
                     string medicinename = ProductUtilities.GetMedicineNameByStockSno(cart.medicineno);
                     int quantity = (cart.stripinsidebox * cart.medicineinsidestrip) + cart.extra;
-                    da.InsertQuery(receiptno, medicinename, quantity, Convert.ToDecimal(cart.price), cart.medicineno);
+                    da.InsertQuery(receiptno, medicinename, quantity, cart.price, cart.medicineno);
                 }
 
 

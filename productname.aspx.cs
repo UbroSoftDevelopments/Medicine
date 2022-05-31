@@ -61,14 +61,14 @@ namespace Medicine
 
 
                     DataManager.DataSet1TableAdapters.productsTableAdapter da = new DataManager.DataSet1TableAdapters.productsTableAdapter();
-                    DataSet1.productsDataTable dt = da.GetDataByProductName();
+                    DataSet1.productsDataTable dt = da.GetDataByProductName(name);
                     if (dt.Rows.Count <= 0)
                     {
                         da.InsertQuery(name, typeno, companyno, "");
 
                         int productno = Convert.ToInt32(da.GetMaxProductNo());
                         DataManager.DataSet1TableAdapters.productbatchTableAdapter pda = new DataManager.DataSet1TableAdapters.productbatchTableAdapter();
-                        pda.InsertQuery(productno, batchno, Convert.ToDecimal(purchaserate), Convert.ToDecimal(rateforsale));
+                        pda.InsertQuery(productno, batchno, purchaserate, rateforsale);
                     }
                 }
                 else
@@ -100,7 +100,7 @@ namespace Medicine
                             hymrpdetails.NavigateUrl = "mrpdetails.aspx?pno=" + productno;
                             return;
                         }
-                        pda.InsertQuery(productno, batchno, Convert.ToDecimal(purchaserate), Convert.ToDecimal(rateforsale));
+                        pda.InsertQuery(productno, batchno, purchaserate, rateforsale);
                     }
                 }
 

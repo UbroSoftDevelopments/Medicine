@@ -36,7 +36,7 @@ namespace Medicine
         {
             string name = Txtname.Text;
             DataManager.DataSet1TableAdapters.productsTableAdapter da = new DataManager.DataSet1TableAdapters.productsTableAdapter();
-            DataSet1.productsDataTable dt = da.GetDataByProductName();
+            DataSet1.productsDataTable dt = da.GetDataByProductName(name);
 
         }
         protected void gvMedicine_RowDataBound(object sender, GridViewRowEventArgs e)
