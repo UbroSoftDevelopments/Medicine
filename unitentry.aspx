@@ -55,7 +55,7 @@
      </asp:GridView>
  
      <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-         ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+         ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
          SelectCommand="SELECT * FROM unit ORDER BY unit"
          UpdateCommand="UPDATE unit set unit=@unit where sno=@sno"
          ></asp:SqlDataSource>

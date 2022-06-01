@@ -69,8 +69,8 @@
 </div>
 <br />
       <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
-        SelectCommand="SELECT products.productname + ', Batch: ' + medicinestock.batchno + ', Expiry Date: ' + FORMAT(medicinestock.expirydate, 'dd-MMM-yyyy', 'en-US') AS productname, medicinestock.mfgdate, medicinestock.expirydate, medicinestock.boxno, medicinestock.stripinsidebox, medicinestock.medicineinsidestrip, medicinestock.unit, medicinestock.hsn, medicinestock.rackno, medicinestock.productno, medicinestock.sno FROM medicinestock INNER JOIN products ON medicinestock.productno = products.productno ORDER BY products.productno, medicinestock.expirydate" ProviderName="<%$ ConnectionStrings:sql6490744ConnectionString.ProviderName %>">
+        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
+        SelectCommand="SELECT products.productname + ', Batch: ' + medicinestock.batchno + ', Expiry Date: ' + FORMAT(medicinestock.expirydate, 'dd-MMM-yyyy', 'en-US') AS productname, medicinestock.mfgdate, medicinestock.expirydate, medicinestock.boxno, medicinestock.stripinsidebox, medicinestock.medicineinsidestrip, medicinestock.unit, medicinestock.hsn, medicinestock.rackno, medicinestock.productno, medicinestock.sno FROM medicinestock INNER JOIN products ON medicinestock.productno = products.productno ORDER BY products.productno, medicinestock.expirydate">
     </asp:SqlDataSource>
     <div class="w3-row">
     <center>
@@ -118,9 +118,12 @@
     </asp:GridView>
     
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
-                ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+                ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
                 SelectCommand="SELECT sno, medicineno, stripinsidebox, medicineinsidestrip, extra, price, userno FROM countersalecart ORDER BY sno DESC"
-                DeleteCommand="Delete from countersalecart where sno=@sno" ProviderName="<%$ ConnectionStrings:sql6490744ConnectionString.ProviderName %>">
+                DeleteCommand="Delete from countersalecart where sno=@sno">
+                <DeleteParameters>
+                    <asp:Parameter Name="sno" />
+                </DeleteParameters>
             </asp:SqlDataSource>
     
      </div>

@@ -103,7 +103,7 @@
  </div>
     
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
         
         
         
@@ -216,7 +216,7 @@
  </div>
     
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
         
         
         

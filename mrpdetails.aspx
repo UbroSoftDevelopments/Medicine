@@ -51,7 +51,7 @@
         <SortedDescendingHeaderStyle BackColor="#4870BE" />
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
         SelectCommand="SELECT * FROM medicinestock WHERE (productno = @productno) ORDER BY mrp">
         <SelectParameters>
             <asp:QueryStringParameter Name="productno" QueryStringField="pno" 

@@ -48,7 +48,7 @@
         </asp:DropDownList>
       
         <asp:SqlDataSource ID="SqlDataSource3" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+            ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
             SelectCommand="SELECT * FROM medicinecompany ORDER BY companyno">
         </asp:SqlDataSource>
 
@@ -72,7 +72,7 @@
 
 
           <asp:SqlDataSource ID="SqlDataSource4" runat="server" 
-              ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+              ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
               SelectCommand="SELECT * FROM unit ORDER BY sno">
           </asp:SqlDataSource>
       </p>
@@ -158,7 +158,7 @@
         <asp:ListItem Selected="True" Text="--Select Medicine--" Value="-1"></asp:ListItem>
     </asp:DropDownList> 
      <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
         SelectCommand="SELECT * FROM products ORDER BY productno">
     </asp:SqlDataSource>
     </div>
@@ -171,7 +171,7 @@
             onselectedindexchanged="ddbatchno_SelectedIndexChanged" OnDataBound="batchSelectedDefault">
         </asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSource5" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+            ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
             SelectCommand="SELECT * FROM productbatch WHERE (productno = @productno)">
             <SelectParameters>
                 <asp:ControlParameter ControlID="ddproductno" Name="productno" 
@@ -254,8 +254,8 @@
 
 </div>
       <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
-        SelectCommand="SELECT sno, unit FROM unit WHERE (sno &gt;= 1) ORDER BY sno" ProviderName="<%$ ConnectionStrings:sql6490744ConnectionString.ProviderName %>">
+        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
+        SelectCommand="SELECT sno, unit FROM unit WHERE (sno &gt;= 1) ORDER BY sno">
     </asp:SqlDataSource>
 
 
@@ -315,9 +315,12 @@
 
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource6" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
         SelectCommand="SELECT * FROM purchasecart ORDER BY sno"
-        DeleteCommand="Delete from purchasecart where sno=@sno" ProviderName="<%$ ConnectionStrings:sql6490744ConnectionString.ProviderName %>">
+        DeleteCommand="Delete from purchasecart where sno=@sno">
+        <DeleteParameters>
+            <asp:Parameter Name="sno" />
+        </DeleteParameters>
     </asp:SqlDataSource>
     </div>
     </div>

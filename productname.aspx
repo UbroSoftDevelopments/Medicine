@@ -71,7 +71,7 @@
         </asp:DropDownList>
        
          <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+            ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
             SelectCommand="SELECT * FROM medicinecompany ORDER BY companyno">
         </asp:SqlDataSource>
         
@@ -84,7 +84,7 @@
               <asp:ListItem Selected="True" Text="--Select Product Type--" Value="-1"></asp:ListItem>
         </asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-              ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+              ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
               SelectCommand="SELECT * FROM unit ORDER BY sno">
           </asp:SqlDataSource>
        </div>
@@ -98,7 +98,7 @@
               <asp:ListItem Selected="True"  Text="--Select Product Name--" Value="-1"></asp:ListItem>
               </asp:DropDownList>
           <asp:SqlDataSource ID="SqlDataSource6" runat="server" 
-           ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+           ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
               SelectCommand="SELECT * FROM products ORDER BY productname">
           </asp:SqlDataSource>
       </div>
@@ -178,7 +178,7 @@
         <SortedDescendingHeaderStyle BackColor="#3E3277" />
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource3" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
         SelectCommand="SELECT * FROM productbatch INNER JOIN products ON products.productno = productbatch.productno ORDER BY products.productname">
     </asp:SqlDataSource>
     </div>
@@ -191,7 +191,7 @@
 
 
     <asp:SqlDataSource ID="SqlDataSource4" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
         SelectCommand="SELECT * FROM medicinecompany WHERE (companyno < @companyno) ORDER BY companyno">
         <SelectParameters>
             <asp:Parameter DefaultValue="3" Name="companyno" Type="Int32" />
@@ -203,7 +203,7 @@
 
 
     <asp:SqlDataSource ID="SqlDataSource5" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
         SelectCommand="SELECT * FROM medicinetype WHERE (sno < @sno) ORDER BY sno">
         <SelectParameters>
             <asp:Parameter DefaultValue="1" Name="sno" Type="Int32" />

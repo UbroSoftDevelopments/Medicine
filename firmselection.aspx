@@ -18,7 +18,7 @@
     </asp:DropDownList>
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
         SelectCommand="SELECT * FROM medicalstores ORDER BY firmname">
     </asp:SqlDataSource>
     <br /><br />

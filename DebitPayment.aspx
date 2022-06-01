@@ -82,7 +82,7 @@
    
    
        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-           ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+           ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
            SelectCommand="SELECT * FROM debitpayment WHERE (firmno = @firmno) ORDER BY date"
              UpdateCommand="update debitpayment set amount=@amount, comment=@comment where sno=@sno"
         DeleteCommand="delete from debitpayment where sno=@sno"

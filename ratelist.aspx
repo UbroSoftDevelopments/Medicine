@@ -57,7 +57,7 @@
         <SortedDescendingHeaderStyle BackColor="#3E3277" />
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:sql6490744ConnectionString %>" 
+        ConnectionString="<%$ ConnectionStrings:medicineConnectionString %>" 
         SelectCommand="SELECT * FROM productbatch ORDER BY purchaserate">
     </asp:SqlDataSource>
 </div>
